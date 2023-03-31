@@ -39,13 +39,17 @@ const students = [
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  students.map((student,index) =>(
-    <tr key={index}>
-      <td>{student.company}</td>
-      <td>{student.contact}</td>
-      <td>{student.country}</td>
-    </tr>
-  ))
+  <table>
+    {students.map((student, st1) => (
+      <tr key={st1.toString()}>
+        <td>{student.company}</td>
+        <td>{student.contact}</td>
+        <td>{student.country}</td>
+      </tr>
+    ))
+    }
+  </table>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
