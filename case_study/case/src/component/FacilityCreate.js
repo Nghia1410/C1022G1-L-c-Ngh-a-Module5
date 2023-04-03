@@ -3,30 +3,30 @@ class FacilityCreate extends Component {
     render() {
         return (
             <>
-                <div class="p-3">
+                <div className="p-3">
 
-                    <h2 class="text-center fw-bold">FACILITY CREATE</h2>
+                    <h2 className="text-center fw-bold">FACILITY CREATE</h2>
 
-                    <p class="text-center mt-3"><a href="/"><i class="fa-solid fa-house-chimney h5 mx-1"></i> Back to HOME</a></p>
+                    <p className="text-center mt-3"><a href="/"><i className="fa-solid fa-house-chimney h5 mx-1"></i> Back to HOME</a></p>
 
-                    <nav class="navbar navbar-expand-lg py-0 my-0">
-                        <div class="container-fluid">
+                    <nav className="navbar navbar-expand-lg py-0 my-0">
+                        <div className="container-fluid">
 
                             <a href="/case/src/prototype/facility/facilityCreate.html">
-                                <button class="btn btn-success btn-outline-secondary btn-sm">
-                                    <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
-                                    <span class="text-light"> Add new Facility</span>
+                                <button className="btn btn-success btn-outline-secondary btn-sm">
+                                    <span className="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
+                                    <span className="text-light"> Add new Facility</span>
                                 </button>
                             </a>
-                            <form class="d-flex my-2" role="search" action="/facility/list">
-                                <input class="form-control me-2" type="text" placeholder="Input search name" th:value="${nameSearch}"
+                            <form className="d-flex my-2" role="search" action="/facility/list">
+                                <input className="form-control me-2" type="text" placeholder="Input search name" th:value="${nameSearch}"
                                     aria-label="Search" name="nameSearch" style="width: 210%"></input>
 
-                                <input class="form-control me-2" type="text" placeholder="Input search FacilityType" th:value="${facilityType}"
+                                <input className="form-control me-2" type="text" placeholder="Input search FacilityType" th:value="${facilityType}"
                                     aria-label="Search" name="facilityTypeSearch" style="width: 210%"></input>
 
-                                <button class="btn btn-outline-success" type="submit" name="action" value="search">
-                                    <i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button className="btn btn-outline-success" type="submit" name="action" value="search">
+                                    <i className="fa-solid fa-magnifying-glass"></i></button>
                             </form>
 
                         </div>
