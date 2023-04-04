@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 function CustomerEdit() {
     return (
         <>
-         <center>
+         <center> 
                 <h1>Chỉnh sửa thông tin khách hàng</h1>
             </center>
             <form>

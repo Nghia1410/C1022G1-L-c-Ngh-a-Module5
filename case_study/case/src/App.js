@@ -12,7 +12,7 @@ function App() {
     <>
       <Header />
       <NavBar />
-      <CustomerEdit />
+      <FacilityList />
       <Footer />
     </>
   );
