@@ -7,12 +7,13 @@ import ContractList from './component/ContractList';
 import ContractCreate from './component/ContractCreate';
 import CustomerCreate from './component/CustomerCreate';
 import CustomerEdit from './component/CustomerEdit';
+import CustomerList from './component/CustomerList';
 function App() {
   return (
     <>
       <Header />
       <NavBar />
-      <FacilityList />
+      <CustomerList />
       <Footer />
     </>
   );

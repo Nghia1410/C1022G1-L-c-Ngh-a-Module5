@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import customers from './Customer'
 class CustomerList extends Component {
     render() {
         return (
@@ -28,27 +29,25 @@ class CustomerList extends Component {
                             <th></th>
                         </tr>
                     </thead>
-                </table>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>1</th>
-                            <th>NGhĩa </th>
-                            <th>Nam</th>
-                            <th>18</th>
-                            <th>0905407023</th>
-                            <th>44 Trần Bình Trọng</th>
-                            <th>Diamond</th>
-                            <th>
-                                <button type="button" onclick="deleteId('${customer.id}','${customer.customerName}')"
-                                    class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1">Xóa</button>
-                            </th>
-                            <th>
-                                <button type="button" onclick="editIdCustomer('${customer.id}')"
-                                    class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Chỉnh sửa</button>
-                            </th>
-                        </tr>
-                    </thead>
+              
+               
+                    <tbody align="center">
+            {customers.customer.map((CustomerList, index) =>
+
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{CustomerList.name}</td>
+                <td>{CustomerList.gender}</td>
+                <td>{CustomerList.age}</td>
+                <td>{CustomerList.phoneNumber}</td>
+                <td>{CustomerList.address}</td>
+                <td>{CustomerList.customerType.name}</td>
+                <td><button style={{ color: "blue" }}>Edit</button></td>
+                <td><button style={{ color: "red" }}>Delete</button></td> 
+              </tr>
+            )
+            }
+          </tbody>
                 </table>
             </>
         )
