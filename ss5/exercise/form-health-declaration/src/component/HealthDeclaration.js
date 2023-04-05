@@ -30,7 +30,7 @@ function HealthDeclaration() {
                             .required("Không được để trống"),
                         phone: Yup.string()
                             .required("Không được để trống")
-                            .min(10,'số điện thoại ít nhất 10 số và nhiều nhất là 12 số').max(12,'số điện thoại ít nhất 10 số và nhiều nhất là 12 số'),
+                            .min(10,'số điện thoại ít nhất 10 số và nhiều nhất là 12 số').max(12,''),
                         email: Yup.string()
                             .email("email sai định dạng.Vd:leducnghia1410@gmail.com").required("Không được để trống"),
 
@@ -39,7 +39,7 @@ function HealthDeclaration() {
                         setTimeout(() => {
                             console.log(values)
                             setSubmitting(false)
-                            toast('Khai báo thành công')
+                            toast("Khai báo thành công")
                         }, 500)
                     }}
             >
@@ -72,13 +72,13 @@ function HealthDeclaration() {
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='radio' id='rd-1'
                                        name='gender'
-                                       value='1'/>
+                                       value='Nam'/>
                                 <label className='form-check-label' htmlFor='rd-1'>Nam</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='radio' id='rd-2'
                                        name='gender'
-                                       value='0'/>
+                                       value='Nữ'/>
                                 <label className='form-check-label' htmlFor='rd-2'>Nữ</label>
                             </div>
                         </div>
@@ -170,37 +170,37 @@ function HealthDeclaration() {
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-1'
                                        name='checkbox1'
-                                       value='1'/>
+                                       value='sốt'/>
                                 <label className='form-check-label' htmlFor='radio-check-1'>Sốt</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-2'
                                        name='checkbox1'
-                                       value='2'/>
+                                       value='Ho'/>
                                 <label className='form-check-label' htmlFor='radio-check-2'>Ho</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-3'
                                        name='checkbox1'
-                                       value='3'/>
+                                       value='Khó thở'/>
                                 <label className='form-check-label' htmlFor='radio-check-3'>Khó thở</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-4'
                                        name='checkbox1'
-                                       value='4'/>
+                                       value='Viêm phổi'/>
                                 <label className='form-check-label' htmlFor='radio-check-4'>Viêm phổi</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-5'
                                        name='checkbox1'
-                                       value='5'/>
+                                       value='Đau họng'/>
                                 <label className='form-check-label' htmlFor='radio-check-5'>Đau họng</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check-6'
                                        name='checkbox1'
-                                       value='6'/>
+                                       value='Mệt mỏi'/>
                                 <label className='form-check-label' htmlFor='radio-check-6'>Mệt mỏi</label>
                             </div>
                         </div>
@@ -209,23 +209,26 @@ function HealthDeclaration() {
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check2-1'
                                        name='checkbox2'
-                                       value='1'/>
+                                       value='Người bệnh hoặc nghi ngờ
+                                       mắc COVID-19'/>
                                 <label className='form-check-label' htmlFor='radio-check2-1'>Người bệnh hoặc nghi ngờ
                                     mắc COVID-19</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check2-2'
                                        name='checkbox2'
-                                       value='2'/>
+                                       value='Người từ quốc gia có bệnh
+                                       COVID-19'/>
                                 <label className='form-check-label' htmlFor='radio-check2-2'>Người từ quốc gia có bệnh
                                     COVID-19</label>
                             </div>
                             <div className='form-check form-check-inline'>
                                 <Field className='form-check-input' type='checkbox' id='radio-check2-3'
                                        name='checkbox2'
-                                       value='3'/>
-                                <label className='form-check-label' htmlFor='radio-check2-3'>Người có biểu hiện (Sốt,
-                                    ho, khó thở, viêm phổi)</label>
+                                       value='Người có biểu hiện: Sốt,
+                                        ho, khó thở, viêm phổi'/>
+                                <label className='form-check-label' htmlFor='radio-check2-3'>Người có biểu hiện: Sốt,
+                                    ho, khó thở, viêm phổi</label>
                             </div>
                         </div>
                         {isSubmitting ?
