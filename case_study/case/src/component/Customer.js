@@ -10,7 +10,20 @@ const customer = [
             id: 1,
             name: 'Diamond'
         }
-    }
+    },
+    {
+        id: 2,
+        name: 'Tai',
+        gender: 'Nam',
+        age: '20',
+        phoneNumber: '0905407023',
+        address: '24 Trung Nu Vuong',
+        customerType: {
+            id: 2,
+            name: 'Gold'
+        }
+    },
+
 ]
 const customerType = [
     {

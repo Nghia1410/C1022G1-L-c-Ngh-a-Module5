@@ -4,18 +4,11 @@ class CustomerList extends Component {
     render() {
         return (
             <>
-                <div className="row mx-0" style="margin-top: 96px;">
-                    <img className="img-fluid px-0" style="height: 400px;"
-                        src="https://furamavietnam.com/wp-content/uploads/2018/08/logo@2x.png"
-                        alt="" />
-                </div>
-                <div>
-                    <h2 className="text-center fw-bold pt-4">Danh Sách Tất Cả Các Khách Hàng</h2>
-                </div>
-                <div>
-                    <button className="ms-5 btn btn-dark">Thêm Khách Hàng Mới</button>
-                </div>
-                <table class="table table-striped">
+                <center>
+                    <div><h1>Danh sách khách hàng</h1></div>
+                </center>
+                <button>Thêm Khách Hàng Mới</button>
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>STT</th>
@@ -25,29 +18,30 @@ class CustomerList extends Component {
                             <th>Số điện thoại</th>
                             <th>Địa chỉ</th>
                             <th>Loại khách hàng</th>
-                            <th></th>
-                            <th></th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
-              
-               
-                    <tbody align="center">
-            {customers.customer.map((CustomerList, index) =>
 
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{CustomerList.name}</td>
-                <td>{CustomerList.gender}</td>
-                <td>{CustomerList.age}</td>
-                <td>{CustomerList.phoneNumber}</td>
-                <td>{CustomerList.address}</td>
-                <td>{CustomerList.customerType.name}</td>
-                <td><button style={{ color: "blue" }}>Edit</button></td>
-                <td><button style={{ color: "red" }}>Delete</button></td> 
-              </tr>
-            )
-            }
-          </tbody>
+
+                    <tbody>
+                        {customers.customer.map((customerList, index) =>
+
+                            <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{customerList.name}</td>
+                                <td>{customerList.gender}</td>
+                                <td>{customerList.age}</td>
+                                <td>{customerList.phoneNumber}</td>
+                                <td>{customerList.address}</td>
+                                <td>{customerList.customerType.name}</td>
+                                <td><button className='btn btn-primary' >Edit</button></td>
+                                <td><button className='btn btn-danger' >Delete</button></td>
+                            </tr>
+                        )
+                        }
+
+                    </tbody>
                 </table>
             </>
         )
