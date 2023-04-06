@@ -1,22 +1,22 @@
-import React, {useEffect, useState} from 'react';
-import {useNavigate} from "react-router";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router";
 import axios from 'axios';
 
 
 function TodoList() {
-    const [todo,setTodo] = useState([]);
+    const [todo, setTodo] = useState([]);
     const navigate = useNavigate();
+    const fetchApi = async () => {
+        try {
+            const result = await axios.get('http://localhost:4000/TodoList')
+            setTodo(result.data);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+    useEffect(() => {
 
-    useEffect(() =>{
-        const fetchApi = async () => {
-            try {
-                const result = await axios.get('http://localhost:4000/TodoList')
-                setTodo(result.data);
-            }catch (e) {
-                console.log(e);
-            }
-        };
-      fetchApi();
+        fetchApi();
     }, []);
     const handleUpdate = (arrIndex) => {
         navigate(`/update/${arrIndex}`);
@@ -28,25 +28,25 @@ function TodoList() {
                 <h1>Todo List</h1>
                 <table className={'table'}>
                     <thead>
-                    <tr>
-                        <th scope={'col'}>Name</th>
-                    </tr>
+                        <tr>
+                            <th scope={'col'}>Name</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <td>
-                        {
-                            todo.map((value,index ) =>(
-                                <tr key={index}>
-                                    <td>{value.name}</td>
-                                </tr>
-                            ))
-                        }
-                    </td>
-                    <td>
-                        <button type={"button"} className={'btn btn-danger'} onClick={() => handleUpdate()}>
-                            Submit
-                        </button>
-                    </td>
+                        <td>
+                            {
+                                todo.map((value, index) => (
+                                    <tr key={index}>
+                                        <td>{value.name}</td>
+                                    </tr>
+                                ))
+                            }
+                        </td>
+                        <td>
+                            <button type={"button"} className={'btn btn-danger'} onClick={() => handleUpdate()}>
+                                Submit
+                            </button>
+                        </td>
                     </tbody>
 
                 </table>

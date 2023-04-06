@@ -1,15 +1,17 @@
 import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BookList from "./component/BookList";
 import CreateBook from "./component/CreateBook";
-import EditBook from "./component/EditBook";
+import EditBook from "./component/EditBook";    
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Route path="/" component={BookList}/>
-            <Route path="/add" component={CreateBook}/>
-            <Route path="/edit/:id" component={EditBook}/>
+            <Routes>
+                <Route path="/" element={<BookList/>} />
+                <Route path="/add" element={<CreateBook/>} />
+                <Route path="/edit/:id" element={<EditBook/>} />
+            </Routes>
         </BrowserRouter>
     );
 };

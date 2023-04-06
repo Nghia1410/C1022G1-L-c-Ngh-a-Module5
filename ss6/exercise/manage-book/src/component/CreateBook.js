@@ -8,7 +8,7 @@ const CreateBook = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .post("http://localhost:3000/books", { title, quantity })
+            .post(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books`, { title, quantity })
             .then(() => {
                 alert("Create successfully");
                 setTitle("");

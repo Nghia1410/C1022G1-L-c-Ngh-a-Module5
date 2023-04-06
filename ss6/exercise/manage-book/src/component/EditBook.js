@@ -18,7 +18,7 @@ const EditBook = ({ match, history }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .put(`http://localhost:3000/books/${match.params.id}`, { title, quantity })
+            .put(`https://my-json-server.typicode.com/codegym-vn/mock-api-books/books/{id}`, { title, quantity })
             .then(() => {
                 alert("Update successfully");
                 history.push("/");
