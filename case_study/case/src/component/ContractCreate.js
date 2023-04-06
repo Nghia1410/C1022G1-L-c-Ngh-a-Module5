@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 function ContractCreate() {
     return (
         <>
-            <div className="">
-                <h2 style={{ textAlign: "center", color: "red" }}>Thêm mới hợp đồng</h2>
+            <div>
+                <h2 style={{ textAlign: "center", color: "red" }}>CREATE CONTRACT</h2>
                 <form>
                     <label htmlFor="idContract">Mã hợp đồng: <span>*</span></label>
                     <input type="text" id="idContract" name="idContract" required="" />

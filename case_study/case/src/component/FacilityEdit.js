@@ -73,4 +73,4 @@ class FacilityEdit extends Component {
         )
     }
 }
-export default FacilityEdit
+export default FacilityEdit;

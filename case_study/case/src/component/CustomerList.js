@@ -5,7 +5,7 @@ class CustomerList extends Component {
         return (
             <>
                 <center>
-                    <div><h1>Danh sách khách hàng</h1></div>
+                    <div><h1>Customer List</h1></div>
                 </center>
                 <button>Thêm Khách Hàng Mới</button>
                 <table className="table table-striped">

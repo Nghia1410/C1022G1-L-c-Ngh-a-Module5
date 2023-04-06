@@ -3,7 +3,7 @@ function CustomerCreate() {
     return (
         <>
             <center>
-                <h1>Thêm mới khách hàng</h1>
+                <h1>CREATE CONTRACT</h1>
             </center>
             <form>
                 <label htmlfor="name">Tên: <span>*</span></label>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 class NavBar extends Component {
     render() {
         return (
@@ -14,10 +15,11 @@ class NavBar extends Component {
                         <div className="col-lg-2" />
                         <div className="navbar-nav col-lg-8">
                             <div>
-                                <button type="button" className="btn btn-close-white">
-                                    <a href="/case/src/prototype/home.html" />
-                                    HOME
-                                </button>
+
+                                <NavLink to='/'>
+                                    <button type="button" className="btn btn-close-white">HOME</button>
+                                </NavLink>
+
                             </div>
                             <div style={{ marginLeft: 30 }}>
                                 <button type="button" className="btn btn-close-white">
@@ -30,18 +32,16 @@ class NavBar extends Component {
                                 </button>
                             </div>
                             <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a style={{ textDecoration: "none" }} href="/facility">
-                                        FACILITY
-                                    </a>
-                                </button>
+
+                                <NavLink to='/facility'>
+                                    <button type="button" className="btn btn-close-white"> FACILITY</button>
+                                </NavLink>
+
                             </div>
                             <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a style={{ textDecoration: "none" }} href="/contract">
-                                        CONTRACT
-                                    </a>
-                                </button>
+                                <NavLink to='/contract'>
+                                    <button type="button" className="btn btn-close-white">CONTRACT </button>
+                                </NavLink>
                             </div>
                         </div>
                         <input placeholder="search" ></input>

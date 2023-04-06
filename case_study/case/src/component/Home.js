@@ -10,48 +10,6 @@ class Home extends Component {
                 className="row"
                 style={{ background: "#046056", height: 60, textAlign: "center" }}
             >
-                <nav className="navbar navbar-expand-lg" style={{ background: "#046056" }}>
-                    <div
-                        className="collapse navbar-collapse container-fluid"
-                        id="navbarNavAltMarkup"
-                    >
-                        <div className="col-lg-2" />
-                        <div className="navbar-nav col-lg-8">
-                            <div>
-                                <button type="button" className="btn btn-close-white">
-                                    <a href="/case/src/prototype/home.html" />
-                                    HOME
-                                </button>
-                            </div>
-                            <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a
-                                        style={{ textDecoration: "none" }}
-                                        href="/case/src/prototype/customer/customer.html"
-                                    >
-                                        CUSTOMER
-                                    </a>
-                                </button>
-                            </div>
-                            <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a style={{ textDecoration: "none" }} href="/facility">
-                                        FACILITY
-                                    </a>
-                                </button>
-                            </div>
-                            <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a style={{ textDecoration: "none" }} href="/contract">
-                                        CONTRACT
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                        <button className="btn btn-outline-light">Đăng nhập</button>
-                        <button className="btn btn-outline-light">Đăng kí</button>
-                    </div>
-                </nav>
             </div>
             <div
                 id="carouselExampleControls"
