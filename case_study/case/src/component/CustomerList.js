@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import customers from './Customer'
+import { NavLink } from 'react-router-dom'
 class CustomerList extends Component {
     render() {
         return (
@@ -7,7 +8,10 @@ class CustomerList extends Component {
                 <center>
                     <div><h1>Customer List</h1></div>
                 </center>
-                <button>Thêm Khách Hàng Mới</button>
+                <NavLink to='/addCustomer'>
+                    <button>Thêm Khách Hàng Mới</button>
+                </NavLink>
+
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -35,7 +39,11 @@ class CustomerList extends Component {
                                 <td>{customerList.phoneNumber}</td>
                                 <td>{customerList.address}</td>
                                 <td>{customerList.customerType.name}</td>
-                                <td><button className='btn btn-primary' >Edit</button></td>
+                                <td>
+                                    <NavLink to='/editCustomer'>
+                                        <button className='btn btn-primary' >Edit</button>
+                                    </NavLink>
+                                </td>
                                 <td><button className='btn btn-danger' >Delete</button></td>
                             </tr>
                         )
@@ -47,4 +55,4 @@ class CustomerList extends Component {
         )
     }
 }
-export default CustomerList
+export default CustomerList;

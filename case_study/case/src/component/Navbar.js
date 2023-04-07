@@ -22,14 +22,12 @@ class NavBar extends Component {
 
                             </div>
                             <div style={{ marginLeft: 30 }}>
-                                <button type="button" className="btn btn-close-white">
-                                    <a
-                                        style={{ textDecoration: "none" }}
-                                        href="/case/src/prototype/customer/customer.html"
-                                    >
-                                        CUSTOMER
-                                    </a>
-                                </button>
+                                <NavLink to='/customer'>
+                                <button type="button" className="btn btn-close-white">CUSTOMER</button>
+                                </NavLink>
+                               
+                                  
+                                
                             </div>
                             <div style={{ marginLeft: 30 }}>
 

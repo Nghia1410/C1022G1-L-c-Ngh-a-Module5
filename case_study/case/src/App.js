@@ -30,6 +30,14 @@ function App() {
           {/* CONTRACT */}
           <Route path='/contract' element={<ContractList />} />
           <Route path='/addContract' element={<ContractCreate />} />
+          {/* CUSTOMER */}
+          <Route path='/addCustomer' element={<CustomerCreate />} />
+          <Route path='/customer' element={<CustomerList />} />
+          <Route path='/editCustomer' element={<CustomerEdit />} />
+
+
+
+
 
 
         </Routes>
