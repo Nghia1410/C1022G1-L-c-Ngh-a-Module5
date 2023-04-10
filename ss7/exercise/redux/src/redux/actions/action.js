@@ -19,7 +19,8 @@ export const deleteUser = (id) => async (dispatch) => {
         alert('xoá thành công!')
         listUser();
         dispatch({
-            type: DELETE_USER
+            type: DELETE_USER,
+            payload:id
         })
     } catch (error) {
         console.log(error);
