@@ -4,7 +4,7 @@ class NavBar extends Component {
     render() {
         return (
             <div
-                className="row"
+                className="container,row"
                 style={{ background: "#046056", height: 60, textAlign: "center" }}
             >
                 <nav className="navbar navbar-expand-lg" style={{ background: "#046056" }}>

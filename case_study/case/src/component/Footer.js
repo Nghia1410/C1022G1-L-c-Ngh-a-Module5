@@ -5,7 +5,8 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <div className="row" style={{ background: "#addccf" }}>
+        <div className='container-fluid'>
+        <div className=" row" style={{ background: "#addccf" }}>
           <div className="col-lg-2" />
           <div
             className="col-lg-3"
@@ -135,6 +136,7 @@ class Footer extends Component {
               © 2018 Furama Resort Danang.
             </p>
           </div>
+        </div>
         </div>
       </footer>
 

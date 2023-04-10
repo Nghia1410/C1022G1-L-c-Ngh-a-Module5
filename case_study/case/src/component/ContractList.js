@@ -22,6 +22,7 @@ function ContractList() {
                             <th>Deposit</th>
                             <th>Total Money</th>
                             <th>Accompanied Facility</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,7 @@ function ContractList() {
                                 <td>{ContractList.deposit}</td>
                                 <td>{ContractList.totalMoney}</td>
                                 <td>{ContractList.accompaniedFacility}</td>
+
                             </tr>
                         )
                         }

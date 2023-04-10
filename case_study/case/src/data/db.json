@@ -1,4 +1,144 @@
 {
-    "customers": []
-
+  "customers": [
+    {
+      "id": 1,
+      "name": "Nghia",
+      "gender": "Nam",
+      "age": 18,
+      "phoneNumber": "0905407023",
+      "address": "44/9 Tran Binh Trong",
+      "customerTypeId": 1
+    },
+    {
+      "id": 2,
+      "name": "Tai",
+      "gender": "Nam",
+      "age": "20",
+      "phoneNumber": "0905407023",
+      "address": "24 Trung Nu Vuong",
+      "customerTypeId": 2
+    },
+    {
+      "name": "Macbook",
+      "gender": "",
+      "age": "18",
+      "phoneNumber": "0905407023",
+      "address": "44 Trần Bình",
+      "customerTypeId": "2",
+      "id": 3
+    },
+    {
+      "name": "Macbook",
+      "gender": "Nam",
+      "age": "55",
+      "phoneNumber": "0905407023",
+      "address": "11 Trần Hưng Đạo",
+      "customerTypeId": 0,
+      "id": 4
+    },
+    {
+      "name": "Conan",
+      "gender": "Nữ",
+      "age": "18",
+      "phoneNumber": "0905407023",
+      "address": "44 Trần Bình Trọng",
+      "customerTypeId": 1,
+      "id": 5
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "name": "Bơi lội",
+      "area": 100,
+      "cost": 50,
+      "maxPeople": 20,
+      "facilityType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "VND"
+      },
+      "standardRoom": "Twin bedroom",
+      "description": "Tốt",
+      "poolArea": 50,
+      "numberOfFloors": 3,
+      "facilityFree": "đồ bơi, kính bơi",
+      "status": false
+    }
+  ],
+  "facilityType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "VND"
+    },
+    {
+      "id": 1,
+      "name": "USD"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "facility": {
+        "id": 1,
+        "name": "Bơi lội"
+      },
+      "customer": {
+        "id": 1,
+        "name": "Nghia"
+      },
+      "dateStart": "14/10/2019",
+      "dateEnd": "23/3/2020",
+      "deposit": "5000",
+      "totalMoney": "30000",
+      "accompaniedFacility": "xe đạp"
+    },
+    {
+      "id": 2,
+      "facility": {
+        "id": 1,
+        "name": "Bơi lội"
+      },
+      "customer": {
+        "id": 2,
+        "name": "Tai"
+      },
+      "dateStart": "14/10/2019",
+      "dateEnd": "23/3/2020",
+      "deposit": "5000",
+      "totalMoney": "30000",
+      "accompaniedFacility": "xe đạp"
+    }
+  ]
 }

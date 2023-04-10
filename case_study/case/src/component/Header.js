@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
           <header>
-          <div>
+          <div className="container">
             <div className="row" style={{ backgroundColor: "white", padding: 20 }}>
               <div className="col-lg-3">
                 <img
