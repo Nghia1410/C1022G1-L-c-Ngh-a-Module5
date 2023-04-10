@@ -1,2 +1,2 @@
-export const GET_ALL_USER = 'GET_ALL_USER';
-export const DELETE_USER = 'DELETE_USER';
+export const LIST_USER = 'LIST_USER'
+export const DELETE_USER = 'DELETE_USER'

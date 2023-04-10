@@ -1,50 +1,58 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllUser, deleteUser } from "../redux/actions/userList";
+import React from "react";
+import { useEffect} from "react";
+import {useDispatch, useSelector} from 'react-redux'
+import {listUser, deleteUser} from '../redux/actions/action'
 
 function UserList() {
-    const users = useSelector(state => state.users)
+    let users = useSelector(state => state.userState)
     const dispatch = useDispatch();
-    console.log(users)
 
     useEffect(() => {
-        console.log("Error");
-        dispatch(getAllUser());
-    }, []);
+        users = dispatch(listUser())
+    }, [])
 
     return (
-        <>
-            <h2>User List</h2>
-            <table className='table table-striped'>
-                <thead>
-                    <tr>
-                        <th scope='col'>Id</th>
-                        <th scope='col'>Name</th>
-                        <th scope='col'>Email</th>
-                        <th scope='col'>Website</th>
-                        <th scope='col'>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        users.map((userList, index) => (
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{userList.name}</td>
-                                <td>{userList.email}</td>
-                                <td>{userList.website}</td>
-                                <td>
-                                    <button type='button' className='btn btn-danger'
-                                        onClick={() => dispatch(deleteUser(users.id))}>DELETE
-                                    </button>
-                                </td>
+        <div>
+            <h1>User List</h1>
+            <button className="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Get users
+            </button>
+            <div>
+                <div className="collapse" id="collapseExample">
+                    <div className="card card-body">
+                        <table className="table tableBorder table-striped">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Website</th>
+                                <th>Action</th>
                             </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
-        </>
-    )
+                            </thead>
+                            <tbody>
+                            {users.map((user, index) => (
+                                <tr key={index}>
+                                    <td>{user.id}</td>
+                                    <td>{user.username}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.website}</td>
+                                    <td>
+                                        <button className="btn btn-danger" onClick={() =>
+                                            dispatch(deleteUser(user.id))}>
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default UserList;

@@ -5,7 +5,7 @@ const findAllUser = () => {
 }
 
 const remove = (id) => {
-    return request.delete('/users/{id}')
+    return request.delete(`/users/${id}`)
 }
 
 const userService = {
