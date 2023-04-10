@@ -1,7 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-
 type CovidData = {
     Date: string;
     Confirmed: number;
