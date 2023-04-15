@@ -1,0 +1,36 @@
+{
+  "bookList": [
+    {
+      "id": 1,
+      "idBook": "BO-123",
+      "name": "Conan",
+      "type": "Hoạt hình",
+      "dayStart": "2023-04-14",
+      "countBook": 5
+    },
+    {
+      "id": 2,
+      "idBook": "BO-456",
+      "name": "Thám tử",
+      "type": "Trinh thám",
+      "dayStart": "2020-04-13",
+      "countBook": 10
+    },
+    {
+      "idBook": "BO-9098",
+      "name": "Macbook",
+      "type": "balad",
+      "dayStart": "2023-04-15",
+      "countBook": "12",
+      "id": 3
+    },
+    {
+      "idBook": "BO-987",
+      "name": "Macbook",
+      "type": "balad",
+      "dayStart": "2023-04-08",
+      "countBook": "12",
+      "id": 4
+    }
+  ]
+}
